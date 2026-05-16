@@ -52,33 +52,32 @@ bash ~/.agents/skills/git-commit/scripts/pre_commit_check.sh
 Conventional Commit 形式を使う。
 
 ```text
-type: emoji 日本語の簡潔な説明
+type: :emoji: 日本語の簡潔な説明
 ```
 
 例:
 
 ```text
-feat: ✨ ユーザー設定画面を追加
-fix: 🐛 設定保存時の例外を修正
-change: 🔧 コミット手順を更新
+feat: :sparkles: ユーザー設定画面を追加
+fix: :bug: 設定保存時の例外を修正
+change: :wrench: コミット手順を更新
 ```
 
-type の前に emoji は置かない。`feat:` / `fix:` などを先頭に置き、Conventional Commit パーサーと相性を保つ。
+type の前に emoji は置かない。`feat:` / `fix:` などを先頭に置き、Conventional Commit パーサーと相性を保つ。emoji は GitHub などで表示しやすい shortcode 形式で書く。
 
 ### 使用する type
 
-- `init`: 初回コミット、初期構成
-- `feat`: 機能追加
-- `fix`: バグ修正
-- `change`: 既存挙動の変更
-- `remove`: 削除
-- `docs`: ドキュメントのみ
-- `chore`: 設定、依存、メタ作業など分類しづらい保守作業
-- `revert`: 取り消しコミット
+- `init: :tada:` 初回コミット、初期構成
+- `feat: :sparkles:` 機能追加
+- `fix: :bug:` バグ修正
+- `change: :wrench:` 既存挙動や設定の変更
+- `remove: :fire:` 削除
+- `docs: :memo:` ドキュメントのみ
+- `refactor: :recycle:` 挙動を変えないコード整理
+- `chore: :bricks:` 設定、依存、メタ作業など分類しづらい保守作業
+- `revert: :rewind:` 取り消しコミット
 
 `feat` と `fix` は Conventional Commits 仕様上の主要 type。その他の type は仕様上許容される。`docs`、`chore`、`revert` は Angular 系の慣習でもよく使われるため採用する。
-
-`refactor`、`style`、`perf`、`build`、`ci`、`test` は常用 type に入れない。必要な場合は `chore` または `change` に寄せる。
 
 ## 禁止事項
 
