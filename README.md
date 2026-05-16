@@ -1,6 +1,6 @@
-# my-agent-skills
+# my-agent-instructions-and-skills
 
-このリポジトリは、agent skills を一元管理するためのリポジトリです。
+このリポジトリは、agent instructions と skills を一元管理するためのリポジトリです。
 
 ## 構成
 

@@ -29,6 +29,17 @@ uv init .
 add-bounds = "major"
 ```
 
+依存パッケージの公開直後を避けたい場合は、uv の dependency cooldowns として `exclude-newer` も設定できます。duration を指定すると、指定期間より新しい公開物を解決対象から外せます。
+
+```toml
+[tool.uv]
+add-bounds = "major"
+exclude-newer = "7 days"
+```
+
+- `exclude-newer = "7 days"` は直近 7 日以内に公開された依存を避けたいときの例
+- より細かく制御したい場合は `exclude-newer-package` でパッケージごとの指定も可能
+
 ## パッケージ管理方法をプロジェクトのAGENTS.mdに追記
 
 `uv-manage-dependencies` スキルの `references/uv-manage-dependencies.md` の内容をプロジェクトのAGENTS.mdに追記する
